@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Oswald:wght@200..700&family=Sekuya&display=swap');
+
+
+    .sekuya-regular {
+  font-family: "Oswald", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    .quadrado {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+}
+
+.retangulo {
+  width: 900px;
+  height: 460px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 750px;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Alinha horizontalmente */
+  align-items: center;     /* Alinha verticalmente */
+  height: 450px;
+  padding: auto;
+  
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    font-family: 'Oswald';
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+img {
+    margin-left: 1155px;
+    margin-bottom: 1030px;
+    
+    border-radius:10px
+}
+
+p {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}

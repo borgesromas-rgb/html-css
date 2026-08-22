@@ -1,0 +1,65 @@
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+P {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#Cori {
+    text-align: left;
+    color: white;
+}
+
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+}
+
+#Pal {
+    text-align: right;
+}
+
+body {
+    background: linear-gradient(to bottom, red, black, black 79%, green);
+}
+
+.Titulo {
+    height: 82px;
+    width: 500px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 8px 7px 12px rgba(0, 0, 0, 0.377); 
+}
+
+.fundo {
+    background: linear-gradient(to bottom, black 1px, green);
+}
+
+article {
+    color: darksalmon;
+}
+
+.especial {
+    margin: -563px 10px 265px 755px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 12px 23px 11px 44px
+}
+
+nav {
+    margin: -522px 759px 215px 21px;
+    background-color: white;
+    padding: 12px 23px 11px 44px;
+    border-radius: 10px;
+    box-shadow: 10px 7px 12px rgba(0, 0, 0, 0.233)
+}

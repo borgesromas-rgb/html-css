@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family:'idrod';
+    src: url(pacote-projeto-d010/fontes/idroid.otf);
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(pacote-projeto-d010/fontes/Bebas-Neue-Light/BebasNeue\ Book.otf);
+}
+
+@font-face {
+    font-family: 'idrod' ;
+    src: url(pacote-projeto-d010/fontes/idroid.otf);
+}
+
+@font-face {
+    font-family: 'h1';
+    src: url(pacote-projeto-d010/fontes/);
+
+
+}
+
+body {
+    background-color: rgb(171, 228, 171);
+}
+
+header {
+    font-family: 'Bebas Neue' ;
+    font-weight: lighter;
+    text-align: center;
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.199);
+    font-size: 1em;
+    background: linear-gradient(to bottom, rgb(60, 217, 131), #1c1b1b);
+    margin: -22px -9px 0px -8px;
+    padding: 36px 0px 1px 2px;
+    border: 0px solid green;
+    color: white;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.Menus {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    margin: 10px 10px 10px 10px;
+    padding: 0px 0px 0px 0px;
+}
+
+span {
+    display: inline-block;
+    margin-left: 13px;
+}
+
+article {
+    background-color: white;
+    text-align: left;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.205);
+    margin: 0px 70px 106px 70px;
+    padding: 8px 0px 60px 21px;
+}
+
+h2 {
+    font-family: 'idrod';
+    color: #195B37 ; 
+}
+
+h3 {
+    font-family: 'idrod';
+    color: #195B37;
+    background: linear-gradient(to right, #99f0c0, rgb(255, 254, 254));
+}
+
+#Android {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #195B37;
+    margin-left: 1px;
+}
+
+#Google {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #195B37;
+    margin-left: 1px;
+    margin-right: 0px;
+}
+
+.indentacao {
+    text-indent: 12px;
+}
+
+.verde {
+    color: #195B37;
+}
+
+.verde {
+   margin-left: -25px; 
+   font-weight: bold;
+}
+
+a {
+    color: #195B37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+.bordavideo {
+    border: 10px solid #1A5C38;
+    background-color: #1A5C38;
+    margin-left: -21px;
+}
+
+.fundolink {
+    background-color: #C5EBD6;
+    color: white;
+    margin: 0px 23px 0px 14px;
+    padding: 0px 0px 17px 8px;
+    border-radius: 10px;
+}
+
+.AprenderMais {
+    margin: 10px 0px 0px -8px;
+    padding: 13px 0px 13px 16px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.lista {
+    color: black;
+    text-decoration: underline;
+    font-weight: 700;
+    margin: 19px 0px 0px 0px;
+    padding: 0px 0px 0px 17px;
+}
+
+footer {
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    margin: 0px 0px 0px -22px;
+    padding: 0px 0px 0px 0px;
+    background-color: #1A5C38;
+}
+
+.branco {
+    color: white;
+    font-weight: bold;
+    margin: 0px;
+}

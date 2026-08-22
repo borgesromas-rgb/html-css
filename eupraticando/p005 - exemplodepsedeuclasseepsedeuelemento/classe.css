@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* Cor normal do botão */
+button {
+  background-color: blue;
+  color: white;
+}
+
+/* Mudança de cor usando a pseudo-classe :hover */
+button:hover {
+  background-color: darkgreen;
+}
+
+.especial {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  transition: transform 0.1s; /* Transição suave */
+}
+
+/* Quando o usuário clica e segura */
+.especial:active {
+  background-color: darkblue;
+  transform: scale(0.95); /* Diminui levemente de tamanho, dando efeito de clique */
+}
+
+/* Aumenta o tamanho do checkbox quando ele estiver marcado */
+input[type="checkbox"]:checked {
+  transform: scale(1.5);
+  accent-color: green; /* Muda a cor interna nos navegadores modernos */
+}
+
+/* O fundo do botão quando está DESLIGADO */
+.botao {
+  background-color: #ccc; /* Cinza */
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+/* O fundo do botão quando está LIGADO */
+input:checked + .botao {
+  background-color: #4CAF50; /* Verde */
+}
+
+/* Campo normal */
+input {
+  border: 2px solid gray;
+  outline: none; /* Remove a borda padrão do navegador */
+}
+
+/* Quando o usuário clica para digitar */
+input:focus {
+  border-color: blue; /* A borda fica azul */
+  background-color: #f0f8ff; /* O fundo ganha um tom azul claro */
+}
+
+/* Estilo normal da caixa de alerta */
+.alerta-erro {
+  background-color: lightcoral;
+  border: 1px solid red;
+  padding: 15px;
+}
+
+/* Se a caixa estiver totalmente vazia, esconda ela da tela */
+.alerta-erro:empty {
+  display: none;
+}
+
+/* Estilo normal da caixa quando ela TEM conteúdo */
+.mensagem-erro {
+  background-color: #ffcccc; /* Fundo vermelho claro */
+  border: 1px solid #ff0000; /* Borda vermelha */
+  color: #990000;            /* Texto vermelho escuro */
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+/* A MÁGICA: Se a caixa estiver VAZIA, ela se esconde sozinha */
+.mensagem-erro:empty {
+  display: none; /* Some com o elemento e com o espaço dele na tela */
+}
+

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root {
+    --corbody: rgb(255, 208, 216);
+    --cor-p: rgb(250, 78, 107);
+    --fonteParis: 'Parisienne';
+    --fonte-h1: 'Lobster';
+}
+
+body {
+    background-color: var(--corbody);
+}
+
+p {
+    font-family: var(--fonteParis);
+    color: var(--cor-p);
+}
+
+h1 {
+    font-family: var(--fonte-h1) ;
+}
