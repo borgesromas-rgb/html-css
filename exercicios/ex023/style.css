@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+body {
+    height: 100vh;
+    background: black url('pacote-d012/imagens/background001.jpg') center center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+
+}
+
+.Conteiner {
+    background-color: black;
+    height: 25%;
+    width: 102%;
+    position: absolute;
+
+    left: -1%;
+    top: -1%;
+}
+
+.Conteiner > h1 {
+    color: white;
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 10vw;
+}
