@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(122, 117, 117);
 }
 
 .conteúdo {
@@ -18,7 +18,7 @@ body {
     border-radius: 10px;
     margin: 10px auto 10px auto;
     padding: 10px;
-    height: 95vh;
+    height: 150vh;
     width: 94%;
 }
 
@@ -57,4 +57,41 @@ body {
 
     left: 39px;
     top: 200px;
+}
+
+.Menus {
+    background-color: darkgrey;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 39vh;
+    width: 100%;
+    position: absolute;
+
+    top: 109%;
+    left: -6%;
+}
+
+#historia {
+    display: block;
+    background-color: rgb(129, 112, 112);
+    background: black url('https://static.corinthians.com.br/uploads/16363731598232e119d8f59aa83050a741631803a6.jpg') no-repeat top right;
+    background-size: cover;
+    background-attachment: fixed;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 88%;
+    width: 50%;
+    position: absolute;
+
+    top: 8%;
+    left: 0%;
+}
+
+.Menus > p {
+    display: block;
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: large;
+    text-align: right;
+    
 }
