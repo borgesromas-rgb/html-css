@@ -1,97 +1,612 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --preto: #050505;
+    --preto-card: #111111;
+    --cinza: #171717;
+    --branco: #ffffff;
+    --cinza-texto: #bdbdbd;
+    --vermelho: #e50914;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: rgb(122, 117, 117);
+    background: var(--preto);
+    color: var(--branco);
+    font-family: 'Noto Sans', sans-serif;
 }
 
-.conteúdo {
-    background-color: rgb(0, 0, 0);
-    border-radius: 10px;
-    margin: 10px auto 10px auto;
-    padding: 10px;
-    height: 150vh;
-    width: 94%;
-}
 
-.conteúdo > img {
-    position: absolute;
+/* =========================
+   HEADER
+========================= */
 
-    left: 7%;
-    top: 5%;
-}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-.imagens {
-    background-color: azure;
-    background-image: url('Imagens/corinthiansfundo\ -\ Editado.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right center;
-    border-radius: 20px;
-    margin-top: -76px;
-    height: 60vh;
-    width: 85vw;
-    
-    position: absolute;
-
-    left: 8%;
-    top: 24%;
-}
-
-.imagens > h2 {
-    font-family: 'Noto Sans';
-   
-    font-variant: small-caps;
-    font-weight: bold;
-    font-size: 4em;
-    color: white;
-    position: absolute;
-
-    left: 39px;
-    top: 200px;
-}
-
-.Menus {
-    background-color: darkgrey;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    height: 39vh;
     width: 100%;
-    position: absolute;
+    height: 75px;
 
-    top: 109%;
-    left: -6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    border-bottom: 1px solid #222;
+
+    z-index: 1000;
 }
 
-#historia {
-    display: block;
-    background-color: rgb(129, 112, 112);
-    background: black url('https://static.corinthians.com.br/uploads/16363731598232e119d8f59aa83050a741631803a6.jpg') no-repeat top right;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 13px;
+    line-height: 1.1;
+}
+
+.logo span {
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--vermelho);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url('https://static.corinthians.com.br/uploads/16045881488164d892d7aea8f1875df07f4d82ffd0.jpg');
+
     background-size: cover;
-    background-attachment: fixed;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    height: 88%;
-    width: 50%;
-    position: absolute;
+    background-position: center;
 
-    top: 8%;
-    left: 0%;
+    padding: 120px 8% 60px;
 }
 
-.Menus > p {
-    display: block;
-    padding-top: 10px;
-    padding-right: 10px;
-    font-size: large;
-    text-align: right;
-    
+.hero-content {
+    max-width: 650px;
+}
+
+.mini-title {
+    color: var(--vermelho);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: 'Archivo Black', sans-serif;
+
+    font-size: clamp(60px, 9vw, 120px);
+
+    line-height: 0.9;
+
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    color: var(--vermelho);
+
+    font-size: clamp(22px, 3vw, 40px);
+
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.mini-title) {
+    color: #ddd;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    max-width: 500px;
+
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+
+    background: var(--vermelho);
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: white;
+    color: black;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 30px;
+}
+
+.section-title {
+    margin-bottom: 45px;
+}
+
+.section-title span {
+    color: var(--vermelho);
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-family: 'Archivo Black', sans-serif;
+
+    font-size: clamp(32px, 5vw, 55px);
+
+    text-transform: uppercase;
+
+    margin-top: 8px;
+}
+
+.section-title p {
+    color: var(--cinza-texto);
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: var(--preto-card);
+
+    border: 1px solid #242424;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    margin-bottom: 30px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    border-color: #444;
+}
+
+.card-reverse .card-image {
+    order: 2;
+}
+
+.card-reverse .card-content {
+    order: 1;
+}
+
+.card-image {
+    min-height: 350px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* IMAGENS */
+
+.historia-img {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.2)
+        ),
+        url('https://static.corinthians.com.br/uploads/16045881488164d892d7aea8f1875df07f4d82ffd0.jpg');
+}
+
+.libertadores-img {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.2)
+        ),
+        url('https://cdn.meutimao.com.br/_upload/noticia/2022/07/04/corinthians-conquistou-a-libertadores-2012-de-ci941w.jpg');
+}
+
+.mundial-img {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.2)
+        ),
+        url('https://static.corinthians.com.br/uploads/1576260134333ac5d90817d69113471fbb6e531bee.jpg');
+}
+
+
+/* CONTEÚDO DO CARD */
+
+.card-content {
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.tag {
+    color: var(--vermelho);
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-family: 'Archivo Black', sans-serif;
+
+    font-size: 32px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+.card p {
+    color: var(--cinza-texto);
+
+    line-height: 1.8;
+
+    margin-bottom: 12px;
+}
+
+.card-button {
+    display: inline-block;
+
+    width: fit-content;
+
+    color: white;
+
+    border: 1px solid white;
+
+    padding: 10px 18px;
+
+    margin-top: 15px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+.card-button:hover {
+    background: white;
+    color: black;
+}
+
+
+/* =========================
+   ÍDOLOS
+========================= */
+
+.idolos {
+    background: #090909;
+
+    padding: 100px 7%;
+}
+
+.idolos-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.idolo {
+    background: var(--preto-card);
+
+    border: 1px solid #222;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    padding-bottom: 25px;
+}
+
+.idolo-image {
+    height: 280px;
+
+    background:
+        linear-gradient(
+            #222,
+            #080808
+        );
+
+    position: relative;
+}
+
+.idolo-image::after {
+    content: "♟";
+
+    position: absolute;
+
+    font-size: 100px;
+
+    color: #555;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.idolo h3 {
+    font-size: 24px;
+
+    margin-top: 20px;
+}
+
+.idolo p {
+    color: var(--vermelho);
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #030303;
+
+    border-top: 1px solid #222;
+
+    padding: 60px 8%;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-logo {
+    display: flex;
+
+    gap: 15px;
+
+    align-items: flex-start;
+}
+
+.footer-logo span {
+    font-size: 40px;
+}
+
+.footer-logo strong {
+    font-size: 15px;
+}
+
+.footer-logo p {
+    color: #777;
+
+    margin-top: 5px;
+}
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-column h3 {
+    color: var(--vermelho);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.footer-column a,
+.footer-column p {
+    color: #999;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    background: #000;
+
+    border-top: 1px solid #222;
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .card-reverse .card-image {
+        order: 1;
+    }
+
+    .card-reverse .card-content {
+        order: 2;
+    }
+
+    .card-image {
+        min-height: 250px;
+    }
+
+    .card-content {
+        padding: 30px;
+    }
+
+    .idolos {
+        padding: 70px 20px;
+    }
+
+    .idolos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+
+        padding: 50px 25px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .card h3 {
+        font-size: 25px;
+    }
+
+    .card-content {
+        padding: 25px;
+    }
 }
